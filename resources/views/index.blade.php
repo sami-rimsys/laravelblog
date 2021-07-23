@@ -42,19 +42,19 @@
 
     <div class="text-center p-15 bg-black text-white">
         <h2 class="text-2xl pb-5 text-l">
-            I'm an expert in...
+            Technologies I know:
         </h2>
         <span class="font-extrabold block text-4xl py-1">
-            Ux Design
+            Java
         </span>
         <span class="font-extrabold block text-4xl py-1">
-            Project Management
+            JavaScript
         </span>
         <span class="font-extrabold block text-4xl py-1">
-            Digital Strategy
+            Google App Script
         </span>
         <span class="font-extrabold block text-4xl py-1">
-            Backend Developer
+            Postman Api
         </span>
     </div>
 
