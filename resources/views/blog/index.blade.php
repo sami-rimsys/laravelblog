@@ -69,5 +69,6 @@
         </div>
     </div>
 @endforeach
+<span>{{ $posts->links() }}</span>
 
 @endsection

@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
+
 class PostsController extends Controller
 {
     public function __construct()
@@ -18,12 +21,16 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         // $post = Post::all();
         // dd($post);
+        
         return view('blog.index')
-            ->with('posts',Post::orderBy('updated_at','DESC')->get());
+            ->with('posts',Post::orderBy('updated_at','DESC')->paginate(2));
+
+        
     }
 
     /**
@@ -31,6 +38,7 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function create()
     {
         return view('blog.create');
@@ -73,6 +81,9 @@ class PostsController extends Controller
 
     public function show($slug)
     {
+        // return view('user.index', [
+        //     'users' => DB::table('users')->paginate(15)
+        // ]);
         return view('blog.show')
             ->with('post', Post::where('slug',$slug)->first());
     }
