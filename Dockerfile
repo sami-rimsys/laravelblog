@@ -48,7 +48,7 @@ RUN chown -R www-data:www-data /var/www/app
 RUN mkdir /run/php
 
 COPY docker/php/laravel.conf /etc/php/${PHP_VERSION}/fpm/pool.d/laravel.conf
-COPY docker/php/php${PHP_VERSION}.ini /etc/php/${PHP_VERSION}/fpm/php.ini
+COPY docker/php/php.ini /etc/php/${PHP_VERSION}/fpm/php.ini
 
 RUN rm /etc/php/${PHP_VERSION}/fpm/pool.d/www.conf
 
