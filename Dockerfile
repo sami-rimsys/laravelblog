@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 ENV DEBIAN_FRONTEND noninteractive
 
-ARG PHP_VERSION=7.4
+ARG PHP_VERSION=8.0
 
 ENV PHP_VERSION ${PHP_VERSION}
 
@@ -26,6 +26,7 @@ RUN apt-get update && \
     php${PHP_VERSION}-xml \
     php${PHP_VERSION}-opcache \
     php${PHP_VERSION}-bcmath \
+    php${PHP_VERSION}-mcrypt \
     openssl \
     nginx \
     vim \
